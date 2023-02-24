@@ -10,6 +10,6 @@ const connection = mysql.createConnection({
 })
 
 module.exports.add = function(latitude,longitude,altitude,callback){
-    const query = 'insert into `fills`(latitude,longitude,altiutde)value("'+latitude+'","'+longitude+'","'+altitude+'")'
+    const query = 'insert into `fills`(latitude,longitude,altitude)value("'+latitude+'","'+longitude+'","'+altitude+'")'
     connection.query(query,callback)
 }
